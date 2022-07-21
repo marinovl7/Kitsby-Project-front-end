@@ -1,0 +1,71 @@
+.flex-tasks {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: nowrap;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 4rem;
+}
+.card-tasks {
+  padding: 2.4rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4.4rem;
+  border-radius: 15px;
+  color: #fff;
+  border: 2px solid #000;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff9a00;
+  height: 35rem;
+}
+.image {
+  color: #fff;
+  transform: scale(3);
+  margin-top: 5rem;
+}
+.list {
+  align-self: flex-start;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.list-item span {
+  font-weight: 600;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  z-index: 10;
+}
+.succes {
+  cursor: pointer;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.6rem;
+  border-radius: 15px;
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #ff9a00;
+}
+.heading {
+  color: #fff;
+  font-weight: 600;
+  font-size: 5rem;
+  margin-bottom: 8rem;
+}
+.heading-done {
+  font-size: 5rem;
+  text-align: center;
+  color: #ff9a00;
+  z-index: 100;
+}

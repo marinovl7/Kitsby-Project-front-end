@@ -1,0 +1,57 @@
+<div class="flex-close">
+  <mat-icon (click)="closeModal()">close</mat-icon>
+</div>
+<div class="error-message flex-container" *ngIf="!loggedIn">
+  <h2 class="heading-secondary heading-alert">
+    Please log in to be able to deposit!
+  </h2>
+  <div class="img-box">
+    <img src="../../../assets/img/error (2).svg" class="error-img" alt="" />
+  </div>
+</div>
+<div class="deposit-message flex-container" *ngIf="loggedIn && !withdrawalMode">
+  <h2 class="heading-secondary">Deposit</h2>
+  <div class="flex-step">
+    <span class="number">1 </span>
+    <p class="subtext subtitle">
+      Tranfer the wished amount to the given bank adress and make sure you've
+      written the amount that you want to transfer correclty
+    </p>
+  </div>
+  <p class="subtext">DE34 1200 1230 1231 3223 22</p>
+  <div class="flex-step">
+    <span class="number">2</span>
+    <p class="subtext alert">
+      Send a screenshot of the transaction to the support and write also your
+      userId.Be sure that you have written your userId correctly,otherwise the
+      VIP Pass would not be assigned to you.
+    </p>
+  </div>
+  <div class="flex-step">
+    <span class="number">3</span>
+    <p class="subtext transaction-ready">
+      When we successfully validated the transaction,in 24 Hours at most you
+      will be assigned the
+      <span class="bold"> {{ vipPass !== "" ? vipPass : "VIP Pass" }}</span>
+      that you qualified for
+    </p>
+  </div>
+  <button class="contact-us">
+    <a class="link-contact-us">Contact Us</a>
+  </button>
+</div>
+<div class="withdraw-div" *ngIf="withdrawalMode">
+  <h2 class="heading-secondary">Withdrawal</h2>
+  <h4 class="subheading">
+    Please write to the support a message with your userId, bank adress and the
+    amount that you want to withdraw. We will transfer the amount within 24
+    hours.
+  </h4>
+  <div class="img-box">
+    <img
+      src="../../../assets/img/withdrawal (2).svg"
+      class="error-img"
+      alt=""
+    />
+  </div>
+</div>

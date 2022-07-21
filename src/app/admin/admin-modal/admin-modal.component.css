@@ -1,0 +1,51 @@
+.input {
+  border-radius: 11px;
+  padding-left: 1.2rem;
+  height: 3.4rem;
+}
+.userId {
+  font-weight: 600;
+  font-size: 2rem;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.addPass,
+.addBalance,
+.btn {
+  font-size: 1.4rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+.addPass {
+  background-color: purple;
+}
+.addBalance {
+  background-color: green;
+}
+.btn {
+  background-color: red;
+}
+label {
+  font-size: 2rem;
+}
+.message {
+  font-size: 1.4rem;
+  color: green;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+}
+.invalid {
+  color: red !important;
+}

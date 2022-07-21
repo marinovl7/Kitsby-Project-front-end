@@ -1,0 +1,128 @@
+@media (max-width: 87.5em) {
+  .landing-img {
+    width: 50rem;
+    height: 50rem;
+  }
+  .grid-container-2-col {
+    column-gap: 4.4rem;
+  }
+}
+@media (max-width: 81.25em) {
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+  .container-130 {
+    max-width: 120rem;
+  }
+  .container {
+    max-width: 130rem;
+  }
+}
+
+@media (max-width: 78.125em) {
+  .grid-container-vip-passes {
+    column-gap: 4rem;
+    row-gap: 4rem;
+    padding: 9rem 6rem;
+  }
+  .img-box {
+    padding: 0 4.2rem;
+  }
+  .grid-container-2-col {
+    padding-top: 6rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .grid-container-2-col {
+    grid-template-columns: 1fr;
+  }
+  .text-box {
+    text-align: center;
+  }
+  .btn-div {
+    justify-content: center;
+  }
+  .img-box-border {
+    background-color: #e6e6e6;
+    border-radius: 50%;
+    margin-top: 4.5rem;
+  }
+  .grid-container-2-col-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .text-box-ref {
+    grid-row: 2;
+  }
+  .reffer-a-friend {
+    margin-top: 4rem;
+  }
+  .grid-container-vip-passes {
+    grid-template-columns: 1fr;
+    grid-row-gap: 4rem;
+  }
+  .card {
+    max-width: 55rem;
+  }
+
+  .grid-container-2-col {
+    padding-top: 9rem;
+  }
+}
+@media (max-width: 46.875em) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-row-gap: 3rem;
+  }
+  .row-3 {
+    grid-row: 3;
+  }
+  .row-4 {
+    grid-row: 4;
+  }
+  .text-box-how-it-works {
+    padding: 1rem 4.2rem;
+  }
+}
+@media (max-width: 43.75em) {
+  .img-box-how-it-works {
+    max-width: 40rem;
+  }
+}
+@media (max-width: 40.625em) {
+  .landing-img {
+    width: 40rem;
+    height: 40rem;
+  }
+  .grid-container-2-col-2 {
+    align-items: start;
+    justify-items: center;
+    grid-template-rows: 45rem 1fr;
+  }
+}
+@media (max-width: 34.375em) {
+  .grid-container-vip-passes {
+    padding: 9rem 3rem;
+  }
+  .flex-container-title {
+    margin-top: 10rem;
+  }
+}
+@media (max-width: 28.125em) {
+  .section-how-it-works {
+    padding: 0;
+  }
+  .special {
+    padding: 4.2rem 4.2rem 0 4.2rem;
+  }
+  .heading-vip-pass {
+    text-align: center;
+  }
+  .grid-container-vip-passes {
+    padding: 9rem 1.5rem;
+  }
+  .landing-img {
+    width: 33rem;
+    height: 33rem;
+  }
+}

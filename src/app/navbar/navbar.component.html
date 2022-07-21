@@ -1,0 +1,50 @@
+<header class="header nav-closed">
+  <div class="logo">
+    <p class="logo-text">KitsbyProject</p>
+  </div>
+  <nav class="main-nav">
+    <ul class="main-nav-items">
+      <li
+        *ngIf="
+          loggedIn &&
+          this.authService.loggedInUserData.getValue().passLevel !== -1
+        "
+        class="nav-item"
+      >
+        <a class="nav-link" routerLink="../tasks">My Tasks</a>
+      </li>
+      <li *ngIf="loggedIn && !isMobile" class="nav-item">
+        <a
+          class="nav-link"
+          (click)="showMyProfile()"
+          [ngClass]="{ 'border-bottom': this.myProfileShowed }"
+          >My Profile</a
+        >
+      </li>
+      <li class="nav-item" *ngIf="!loggedIn">
+        <a class="nav-link" (click)="switchToAuthComponent()">Login</a>
+      </li>
+      <li class="nav-item" *ngIf="!loggedIn">
+        <a (click)="onDeposit()" class="nav-link">Deposit</a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link nav-link-button"
+          >Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <div class="mobile-div">
+    <mat-icon
+      class="btn-my-profile__render"
+      (click)="showMyProfile()"
+      *ngIf="loggedIn && isMobile"
+      >account_circle</mat-icon
+    >
+    <button class="btn-mobile-nav" (click)="openCloseNav()">
+      <mat-icon class="icon-mobile-nav menu-outline">menu</mat-icon>
+      <mat-icon class="icon-mobile-nav close-outline">close</mat-icon>
+    </button>
+  </div>
+</header>

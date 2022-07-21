@@ -1,0 +1,51 @@
+.flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 4rem;
+  flex-direction: column;
+  gap: 2.4rem;
+  user-select: none;
+}
+
+.heading-section {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #ff9a00;
+}
+.text {
+  font-size: 1.8rem;
+  color: #777;
+}
+.date {
+  font-weight: 600;
+}
+.heading {
+  align-self: center;
+  text-align: center;
+}
+.flex-btns {
+  margin-top: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.btn {
+  padding: 1.4rem 2.8rem;
+  text-decoration: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  border-radius: 15px;
+  background-color: #ff9a00;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.btn:hover,
+.btn:active {
+  background-color: #ff9a00;
+}

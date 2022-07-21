@@ -1,0 +1,70 @@
+<div class="container-home">
+  <div class="container-my-profile">
+    <div [ngClass]="{ display: renderMyProfile }" class="my-profile">
+      <div class="flex-container">
+        <div class="flex-item">
+          <mat-icon class="icon">account_circle</mat-icon>
+          <p class="userId">
+            {{ this.authService.loggedInUserData.getValue()._id }}
+          </p>
+        </div>
+        <div class="flex-item">
+          <mat-icon class="icon">paid</mat-icon>
+          <span class="bold">{{
+            this.authService.loggedInUserData.getValue().balance.toFixed(2)
+          }}</span>
+        </div>
+        <div class="flex-item">
+          <mat-icon class="icon">payments</mat-icon>
+          <span class="bold"
+            >VIP PASS LEVEL
+            {{
+              this.authService.loggedInUserData.getValue().passLevel === -1
+                ? 0
+                : +this.authService.loggedInUserData.getValue().passLevel + 1
+            }}</span
+          >
+        </div>
+        <div class="flex-item">
+          <mat-icon class="icon">group_add</mat-icon>
+          <span class="bold"
+            >Refferal link:
+            {{
+              this.authService.loggedInUserData.getValue().referralLink
+            }}</span
+          >
+        </div>
+        <div class="flex-item">
+          <mat-icon class="icon">group_add</mat-icon>
+          <span class="bold"
+            >Admin Page
+            <button class="btn-my-profile" routerLink="../admin">
+              Admin
+            </button></span
+          >
+        </div>
+        <div class="flex-item martop">
+          <button
+            (click)="onDeposit('')"
+            class="btn-my-profile"
+            *ngIf="
+              this.authService.loggedInUserData.getValue().passLevel === -1
+            "
+          >
+            Deposit
+          </button>
+          <button
+            class="btn-my-profile"
+            *ngIf="
+              this.authService.loggedInUserData.getValue().passLevel !== -1
+            "
+            (click)="onWithdrawal('')"
+          >
+            Withdraw
+          </button>
+          <button class="btn-my-profile" (click)="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

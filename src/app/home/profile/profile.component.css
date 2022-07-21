@@ -1,0 +1,82 @@
+.container-my-profile {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-color: transparent;
+}
+.my-profile {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1000;
+  background-color: #ff9a00;
+  width: 30rem;
+  height: auto;
+  padding: 0.8rem 1.2rem;
+  padding-bottom: 1.6rem !important;
+  box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.5);
+  box-shadow: -15px 0 15px -15px rgba(0, 0, 0, 0.5);
+  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.flex-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.2rem;
+  flex-direction: column;
+  color: #fff;
+}
+.flex-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.icon {
+  color: #fff;
+  cursor: auto;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.icon:hover {
+  color: #fff;
+}
+.userId {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.bold {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+.btn-my-profile {
+  padding: 1.2rem 2.4rem;
+  border: none;
+  color: #ff9a00;
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+.martop {
+  margin-top: 2.4rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.btn-my-profile:hover,
+.btn-my-profile:active {
+  background-color: #eeee;
+}
+.display {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+  z-index: 1000;
+}
+.container-home {
+  position: relative;
+}

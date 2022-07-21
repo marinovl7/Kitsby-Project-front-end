@@ -1,0 +1,252 @@
+<div class="wrapper">
+  <app-navbar></app-navbar>
+  <app-profile></app-profile>
+  <div class="container">
+    <div class="grid grid-container-2-col">
+      <div class="text-box slide-in from-left">
+        <h1 class="heading-primary heading-home">
+          Start gaining money from doing simple tasks now
+        </h1>
+        <p class="landing-page-text">
+          Gain money from daily tasks, when you subscribe. Want to see how your
+          money increases every day by simply doing simple tasks? Then you have
+          found the right place.<br />
+        </p>
+        <div class="btn-div">
+          <button class="signup-button btn" (click)="onSignUp()">
+            Sign Up
+          </button>
+        </div>
+      </div>
+      <div class="img-box img-box-border slide-in from-right">
+        <img
+          src="../../assets/img/landing-page.svg"
+          alt=""
+          class="landing-img"
+        />
+      </div>
+    </div>
+  </div>
+
+  <section class="vip-pass-section fade-in">
+    <div class="custom-shape-divider-top-1657031480">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+          opacity=".25"
+          class="shape-fill"
+        ></path>
+        <path
+          d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+          opacity=".5"
+          class="shape-fill"
+        ></path>
+        <path
+          d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+          class="shape-fill"
+        ></path>
+      </svg>
+    </div>
+    <div class="container container-vip-pass">
+      <div class="flex-container-title">
+        <h1 class="heading-primary heading-vip-pass">Here is how it works</h1>
+        <p class="subtitle-vip-passes">
+          Choose the VIP Pass that suits your investment and start doing simple
+          daily tasks, which give different amount of money for each task done.
+          We offer 4 VIP Passes which give you different amount of daily tasks
+          per day and the tasks's difficullty depends on the pass level.The
+          higher the pass level, the easier the tasks.
+        </p>
+      </div>
+      <div class="grid-container-vip-passes">
+        <div class="custom-shape-divider-top-1657036051">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+        <div
+          class="card"
+          *ngFor="let vipPass of vipPasses; let i = index"
+          ngClass="vip-{{ i }}"
+        >
+          <h3 class="heading-card">VIP {{ i }}</h3>
+          <p class="daily-earnings text-card">
+            Daily Tasks: Random amount between [{{ vipPass.dailyTaskMin }} and
+            {{ vipPass.dailyTaskMax }}]
+          </p>
+          <p class="montly-earning text-card">
+            Task difficullty : {{ vipPass.taskDifficulty }}
+          </p>
+          <p class="montly-earning text-card">
+            Task done reward : [{{ vipPass.moneyEarnedMin }} -
+            {{ vipPass.moneyEarnedMax }}]$
+          </p>
+          <div class="button-container">
+            <div class="flex-text">
+              <p class="qualified-deposits text-card">
+                Price: {{ vipPass.price }}$
+              </p>
+            </div>
+            <button
+              (click)="onDeposit('VIP ' + i)"
+              class="btn-deposit"
+              ngClass="btn-vip-{{ i }}"
+            >
+              <p class="text-btn">Deposit</p>
+            </button>
+          </div>
+        </div>
+        <div class="custom-shape-divider-bottom-1657036177">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-how-it-works">
+    <div class="container-130 special">
+      <span class="subtitle-header">How it works</span>
+      <h1 class="heading-primary">Start earning money in 3 simple steps.</h1>
+    </div>
+    <div class="container-130">
+      <div class="grid-container">
+        <div class="text-box-how-it-works slide-in from-left">
+          <span class="number">1 </span>
+          <h2 class="heading-secondary heading-how-it-works">
+            Choose a VIP Pass that suits your investment
+          </h2>
+          <p class="text-how-it-works">
+            Choose between 4 different ranges of deposit and start completing
+            daily tasks to earn money for each task done.
+          </p>
+        </div>
+
+        <div class="img-box img-box-how-it-works slide-in from-right">
+          <img
+            src="../../assets/img/step1 (2).png"
+            alt=""
+            class="img-how-it-works"
+          />
+        </div>
+
+        <div class="img-box img-box-how-it-works slide-in from-left row-4">
+          <img
+            src="../../assets/img/step2 (2).png"
+            alt=""
+            class="img-how-it-works"
+          />
+        </div>
+        <div class="text-box-how-it-works slide-in from-right row-3">
+          <span class="number">2 </span>
+          <h2 class="heading-secondary heading-how-it-works">
+            Purchase a VIP Pass which is valid for a Month
+          </h2>
+          <p class="text-how-it-works">
+            When you click on deposit,there are instructions how you can buy the
+            VIP Pass.Follow them and you can be 100% safe that nothing can go
+            wrong.
+          </p>
+        </div>
+
+        <div class="text-box-how-it-works slide-in from-left">
+          <span class="number">3 </span>
+          <h2 class="heading-secondary heading-how-it-works">
+            Start doing daily tasks
+          </h2>
+          <p class="text-how-it-works">
+            When you receive your VIP Pass you will start receiving daily tasks
+            every day in 00:00(UTC Time Zone).The tasks will be as much,as hard
+            and will give as much as described in your VIP Pass.The money that
+            you earn is written on every task you receive,but the amount of
+            tasks is always a random number witin a range
+          </p>
+        </div>
+        <div class="img-box img-box-how-it-works slide-in from-right">
+          <img
+            src="../../assets/img/step3.png"
+            alt=""
+            class="img-how-it-works"
+          />
+          <div class="nab"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="reffer-a-friend">
+    <div class="container-130">
+      <div class="container-130">
+        <span class="subtitle-header">Referr a friend</span>
+        <h1 class="heading-primary">Invite a friend &mdash; receive a bonus</h1>
+      </div>
+      <div class="grid-container-2-col-2 grid">
+        <div class="text-box text-box-ref slide-in from-left">
+          <h2 class="heading-secondary heading-reff">
+            You can get up to 25$ for each friend
+          </h2>
+          <p class="landing-page-text text-reff">
+            It's simple. Here you can learn more about how everything works.
+          </p>
+          <ul class="step-list">
+            <li class="list-item">
+              <span class="number-reff">1</span>
+              <p class="list-text">
+                Invite a friend that creates a new account with your personal
+                referral link (you can find the link when you click on My
+                Profile)
+              </p>
+            </li>
+            <li class="list-item">
+              <span class="number-reff">2</span>
+              <p class="list-text">
+                Your friend should buy any of our VIP Passes
+              </p>
+            </li>
+            <li class="list-item">
+              <span class="number-reff">3</span>
+              <p class="list-text">
+                As soon as the VIP Pass is assigned to your friend's profile,
+                you will receive 5% of the amount of the VIP Pass
+              </p>
+            </li>
+          </ul>
+          <p class="landing-page-text text-reff under">
+            There is no limit how many friends you can invite, but it is
+            important to not forget to tell them to type your referral link by
+            registration, later referral link assignment is not possible. The
+            Bonus rule applies only if your friends buy any of the VIP Passes.
+          </p>
+        </div>
+        <div class="img-box img-box-reff slide-in from-right">
+          <img
+            src="../../assets/img/refferal (2).svg"
+            alt=""
+            class="reff-img"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-footer></app-footer>
+</div>

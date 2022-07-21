@@ -1,0 +1,42 @@
+.table {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+}
+.mat-table {
+  border: 2px solid black;
+}
+th {
+  background-color: #ff9a00;
+}
+th.mat-header-cell {
+  font-size: 1.4rem;
+  color: #fff;
+}
+.mat-column-userId,
+.mat-column-email,
+.mat-column-balance,
+.mat-column-VIPPassLevel,
+.mat-column-ReferralLink,
+.mat-column-SignedUpreferralLink,
+.mat-column-Action {
+  padding-right: 8rem !important;
+}
+.btn-action {
+  padding: 0.8rem 1.6rem;
+  border-radius: 15px;
+  font-size: 1.4rem;
+  border: none;
+  background-color: #ff9a00;
+  cursor: pointer;
+}
+.mat-row:hover .mat-cell {
+  border-color: currentColor;
+}
+.mat-row .mat-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}

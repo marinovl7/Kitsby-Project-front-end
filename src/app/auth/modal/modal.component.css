@@ -1,0 +1,36 @@
+.flex-container {
+  padding: 2.4rem;
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title {
+  font-size: 3.2rem;
+  color: #333;
+  font-weight: 700;
+}
+.userId {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #444;
+}
+.subtitle {
+  font-size: 1.6rem;
+  color: #555;
+}
+.btn {
+  border: #fff;
+  border-radius: 15px;
+  background-color: #ff9a00;
+  color: #fff;
+  padding: 1.4rem 2.8rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+.btn:hover,
+.btn:active {
+  background-color: #ff9a00;
+}

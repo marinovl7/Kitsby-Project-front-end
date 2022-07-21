@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <app-navbar></app-navbar>
+  <app-profile></app-profile>
+  <div class="container">
+    <h2
+      class="heading"
+      [ngClass]="{
+        'heading-done': tasksDone
+      }"
+    >
+      You have done all you tasks for today
+    </h2>
+    <div class="flex-tasks" *ngIf="tasks.length !== 0">
+      <div class="card-tasks" *ngFor="let task of tasks; let i = index">
+        <mat-icon class="image">{{ task.icon }}</mat-icon>
+
+        <ul class="list">
+          <li class="list-item"><span>Name:</span> {{ task.name }}</li>
+          <li class="list-item">
+            <span>Money:</span> {{ task.money.toFixed(2) }}
+          </li>
+          <li class="list-item">
+            <span>Difficulty:</span> {{ task.difficulty }}
+          </li>
+          <li class="list-item">
+            <span>Description:</span> {{ task.description }}
+          </li>
+        </ul>
+        <button class="succes" (click)="onTaskCompleted(task.id)">
+          Task Completed
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

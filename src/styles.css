@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  border: none !important;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+}
+html,
+body {
+  height: 100%;
+}
+@media (max-width: 71.875em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 34.375em) {
+  html {
+    font-size: 50%;
+  }
+}

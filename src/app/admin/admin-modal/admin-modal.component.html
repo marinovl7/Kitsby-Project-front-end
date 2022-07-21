@@ -1,0 +1,27 @@
+<div class="content">
+  <h2 class="userId">{{ userId }}</h2>
+  <label for="addBalance">Add Balance:</label>
+  <div class="flex">
+    <input class="input" ngModel #amount="ngModel" type="number" />
+    <button class="addBalance" type="submit" (click)="addBalance(amount)">
+      Add Balance
+    </button>
+  </div>
+  <label for="addBalance">Put Pass Lvl:</label>
+  <div class="flex">
+    <input class="input" ngModel #passLvl="ngModel" type="number" />
+    <button class="addPass" type="submit" (click)="addPassLvl(passLvl)">
+      Add Pass Lvl
+    </button>
+  </div>
+  <button class="btn" (click)="deleteUser()">Delete user</button>
+  <div
+    class="message"
+    *ngIf="message !== ''"
+    [ngClass]="{
+      invalid: message.includes('wrong') || message.includes('FAILED')
+    }"
+  >
+    {{ message }}
+  </div>
+</div>

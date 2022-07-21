@@ -1,0 +1,41 @@
+<div class="table">
+  <table *ngIf="!loading" mat-table class="users" [dataSource]="allUsers">
+    <ng-container matColumnDef="userId">
+      <th mat-header-cell *matHeaderCellDef>UserId</th>
+      <td mat-cell *matCellDef="let user">{{ user._id }}</td>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let user">{{ user.email }}</td>
+    </ng-container>
+    <ng-container matColumnDef="balance">
+      <th mat-header-cell *matHeaderCellDef>Balance</th>
+      <td mat-cell *matCellDef="let user">{{ user.balance.toFixed(2) }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="VIPPassLevel">
+      <th mat-header-cell *matHeaderCellDef>VIP Pass Level</th>
+      <td mat-cell *matCellDef="let user">{{ user.passLevel }}</td>
+    </ng-container>
+    <ng-container matColumnDef="ReferralLink">
+      <th mat-header-cell *matHeaderCellDef>Referral Link</th>
+      <td mat-cell *matCellDef="let user">{{ user.referralLink }}</td>
+    </ng-container>
+    <ng-container matColumnDef="SignedUpreferralLink">
+      <th mat-header-cell *matHeaderCellDef>SU Referral Link</th>
+      <td mat-cell *matCellDef="let user">
+        {{ user.signedUpReferralLink ? user.signedUpReferralLink : "None" }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="Action">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td class="flex-action" mat-cell *matCellDef="let user">
+        <button class="btn-action" (click)="onAction(user)">Action</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+    <tr mat-row *matRowDef="let user; columns: displayedColumns"></tr>
+  </table>
+</div>

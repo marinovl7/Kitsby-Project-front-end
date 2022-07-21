@@ -1,0 +1,24 @@
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.error-img {
+  width: 45rem;
+  height: 45rem;
+}
+.heading-secondary {
+  font-size: 4rem;
+  color: #3f3d56;
+}
+@media (max-width: 28.125em) {
+  .heading-secondary {
+    font-size: 3.2rem;
+  }
+  .error-img {
+    height: 35rem;
+    width: 35rem;
+  }
+}
